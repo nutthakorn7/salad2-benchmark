@@ -1,0 +1,80 @@
+{
+ "dataset": "cicids",
+ "n_test": 10000,
+ "n_bootstrap": 2000,
+ "point_estimates": {
+  "decision_tree": 0.931,
+  "linear_svc": 0.9636,
+  "bert": 0.9532,
+  "majority_floor": 0.0377
+ },
+ "marginal_ci": {
+  "decision_tree": {
+   "ci95_low": 0.9231,
+   "ci95_high": 0.9385
+  },
+  "linear_svc": {
+   "ci95_low": 0.959,
+   "ci95_high": 0.9679
+  },
+  "bert": {
+   "ci95_low": 0.9475,
+   "ci95_high": 0.9587
+  },
+  "majority_floor": {
+   "ci95_low": 0.0364,
+   "ci95_high": 0.039
+  }
+ },
+ "paired": {
+  "decision_tree_minus_linear_svc": {
+   "observed": -0.0326,
+   "boot_mean": -0.0326,
+   "ci95_low": -0.04,
+   "ci95_high": -0.0251,
+   "frac_sign_flip": 0.0,
+   "separated_at_95": true
+  },
+  "decision_tree_minus_bert": {
+   "observed": -0.0222,
+   "boot_mean": -0.0222,
+   "ci95_low": -0.0301,
+   "ci95_high": -0.0139,
+   "frac_sign_flip": 0.0,
+   "separated_at_95": true
+  },
+  "decision_tree_minus_majority_floor": {
+   "observed": 0.8933,
+   "boot_mean": 0.8933,
+   "ci95_low": 0.8852,
+   "ci95_high": 0.9008,
+   "frac_sign_flip": 0.0,
+   "separated_at_95": true
+  },
+  "linear_svc_minus_bert": {
+   "observed": 0.0104,
+   "boot_mean": 0.0104,
+   "ci95_low": 0.0058,
+   "ci95_high": 0.0151,
+   "frac_sign_flip": 0.0,
+   "separated_at_95": true
+  },
+  "linear_svc_minus_majority_floor": {
+   "observed": 0.9259,
+   "boot_mean": 0.9259,
+   "ci95_low": 0.9211,
+   "ci95_high": 0.9304,
+   "frac_sign_flip": 0.0,
+   "separated_at_95": true
+  },
+  "bert_minus_majority_floor": {
+   "observed": 0.9155,
+   "boot_mean": 0.9155,
+   "ci95_low": 0.9094,
+   "ci95_high": 0.9213,
+   "frac_sign_flip": 0.0,
+   "separated_at_95": true
+  }
+ },
+ "note": "LLM ladder cells excluded: per-row predictions on the full test set were not retained, so they cannot be paired against these baselines."
+}

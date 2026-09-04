@@ -1,0 +1,27 @@
+{
+  "macro_f1": 0.5946218589189833,
+  "accuracy": 0.6812,
+  "num_classes": 10,
+  "classes": [
+    "Analysis",
+    "Backdoor",
+    "DoS",
+    "Exploits",
+    "Fuzzers",
+    "Generic",
+    "Normal",
+    "Reconnaissance",
+    "Shellcode",
+    "Worms"
+  ],
+  "selection": "val split (10% of train), stratified; test used only for the reported score",
+  "val_f1_per_epoch": [
+    0.2983,
+    0.4738,
+    0.5523,
+    0.6397,
+    0.6444
+  ],
+  "best_checkpoint": "outputs/bert-unsw-refit/checkpoint-1410",
+  "epochs": 5
+}

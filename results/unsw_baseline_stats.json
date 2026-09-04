@@ -1,0 +1,96 @@
+{
+ "dataset": "unsw",
+ "n_test": 10000,
+ "n_bootstrap": 2000,
+ "labels": [
+  "Analysis",
+  "Backdoor",
+  "DoS",
+  "Exploits",
+  "Fuzzers",
+  "Generic",
+  "Normal",
+  "Reconnaissance",
+  "Shellcode",
+  "Worms"
+ ],
+ "support": {
+  "DoS": 1326,
+  "Backdoor": 355,
+  "Exploits": 1326,
+  "Fuzzers": 1326,
+  "Generic": 1325,
+  "Normal": 1326,
+  "Reconnaissance": 1326,
+  "Shellcode": 1072,
+  "Analysis": 498,
+  "Worms": 120
+ },
+ "point_estimates": {
+  "decision_tree": 0.5874,
+  "linear_svc": 0.6505,
+  "majority_class_floor": 0.0234
+ },
+ "bootstrap": {
+  "decision_tree": {
+   "boot_mean": 0.587,
+   "ci95_low": 0.5748,
+   "ci95_high": 0.5988
+  },
+  "linear_svc": {
+   "boot_mean": 0.6503,
+   "ci95_low": 0.6386,
+   "ci95_high": 0.662
+  },
+  "majority_class_floor": {
+   "boot_mean": 0.0234,
+   "ci95_low": 0.0224,
+   "ci95_high": 0.0245
+  },
+  "_paired_svc_minus_dt": {
+   "mean_diff": 0.0633,
+   "ci95_low": 0.0514,
+   "ci95_high": 0.0753,
+   "frac_favoring_dt": 0.0
+  }
+ },
+ "per_class_f1": {
+  "decision_tree": {
+   "Analysis": 0.1515,
+   "Backdoor": 0.3739,
+   "DoS": 0.4155,
+   "Exploits": 0.4333,
+   "Fuzzers": 0.6418,
+   "Generic": 0.8658,
+   "Normal": 0.7469,
+   "Reconnaissance": 0.8233,
+   "Shellcode": 0.7116,
+   "Worms": 0.7107
+  },
+  "linear_svc": {
+   "Analysis": 0.2563,
+   "Backdoor": 0.48,
+   "DoS": 0.4098,
+   "Exploits": 0.542,
+   "Fuzzers": 0.703,
+   "Generic": 0.8882,
+   "Normal": 0.8037,
+   "Reconnaissance": 0.8641,
+   "Shellcode": 0.7978,
+   "Worms": 0.7596
+  },
+  "majority_class_floor": {
+   "Analysis": 0.0,
+   "Backdoor": 0.0,
+   "DoS": 0.0,
+   "Exploits": 0.0,
+   "Fuzzers": 0.2342,
+   "Generic": 0.0,
+   "Normal": 0.0,
+   "Reconnaissance": 0.0,
+   "Shellcode": 0.0,
+   "Worms": 0.0
+  }
+ },
+ "method": "TF-IDF(max_features=5000, stop_words=english, token_pattern=[^\\s:]+) over rendered flow-text prompt; identical pipeline to salad2_baselines.py"
+}

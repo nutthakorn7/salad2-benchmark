@@ -1,0 +1,25 @@
+{
+  "macro_f1": 0.9532011870619675,
+  "accuracy": 0.9547,
+  "num_classes": 8,
+  "classes": [
+    "Benign",
+    "Botnet",
+    "BruteForce",
+    "DDoS",
+    "DoS",
+    "Infiltration",
+    "Portscan",
+    "WebAttack"
+  ],
+  "selection": "val split (10% of train), stratified; test used only for the reported score",
+  "val_f1_per_epoch": [
+    0.9117,
+    0.947,
+    0.9397,
+    0.9521,
+    0.9507
+  ],
+  "best_checkpoint": "outputs/bert-cicids-refit/checkpoint-1128",
+  "epochs": 5
+}
