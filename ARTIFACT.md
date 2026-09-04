@@ -1,5 +1,7 @@
 # SALAD-v2 — Reproducibility Artifact Manifest
 
+**Repository:** <https://github.com/nutthakorn7/salad2-benchmark>
+
 Companion to *"SALAD-v2: A Leak-Screened Benchmark and Validated Methodology for
 Real-Network-Flow SOC Alert Classification."*
 
