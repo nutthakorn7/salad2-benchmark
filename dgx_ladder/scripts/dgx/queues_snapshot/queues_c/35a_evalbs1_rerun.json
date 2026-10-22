@@ -1,0 +1,15 @@
+[
+ {
+  "name": "T_cicids_lora_r16_lr2e-3_e3_v500_bs1",
+  "arm": "cicids",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.002,
+  "steps": 3375,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 1,
+  "save_adapter": 1
+ }
+]

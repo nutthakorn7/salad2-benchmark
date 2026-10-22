@@ -1,0 +1,205 @@
+{
+ "verdict": "PASS",
+ "criterion_A_boundary": 0.85,
+ "criterion_B_boundary": 0.9,
+ "false_positives_clean": true,
+ "criterion_B_justified_smallN_imbalanced_exact_leak": true,
+ "residual_gap_smallN_imbalanced_partial_leak": {
+  "purity_0.90_criterion_A_flag_rate": 0.0,
+  "purity_0.90_criterion_B_flag_rate": 0.0,
+  "note": "a ~90%-pure (non-exact) leak in a small (~130 unique row), imbalanced (80% dominant class) sample can evade both criteria \u2014 known limitation."
+ },
+ "results": [
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.0,
+   "solo_f1": 0.0896,
+   "full_f1": 0.2756,
+   "flagged": false,
+   "criterion": null
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.5,
+   "solo_f1": 0.5538,
+   "full_f1": 0.5344,
+   "flagged": false,
+   "criterion": null
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.7,
+   "solo_f1": 0.739,
+   "full_f1": 0.7054,
+   "flagged": false,
+   "criterion": null
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.8,
+   "solo_f1": 0.8283,
+   "full_f1": 0.7879,
+   "flagged": false,
+   "criterion": null
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.85,
+   "solo_f1": 0.8672,
+   "full_f1": 0.8286,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.9,
+   "solo_f1": 0.9017,
+   "full_f1": 0.8776,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.95,
+   "solo_f1": 0.9538,
+   "full_f1": 0.9413,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 0.99,
+   "solo_f1": 0.9899,
+   "full_f1": 0.9736,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_A_sweep",
+   "purity_injected": 1.0,
+   "solo_f1": 1.0,
+   "full_f1": 0.9841,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 0.0,
+   "purity_measured": 0.1442,
+   "cardinality": 8,
+   "flagged": false,
+   "criterion": null
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 0.5,
+   "purity_measured": 0.5682,
+   "cardinality": 8,
+   "flagged": false,
+   "criterion": null
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 0.9,
+   "purity_measured": 0.9017,
+   "cardinality": 8,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 0.99,
+   "purity_measured": 0.9907,
+   "cardinality": 8,
+   "flagged": true,
+   "criterion": "A:statistical"
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 0.999,
+   "purity_measured": 0.9993,
+   "cardinality": 8,
+   "flagged": true,
+   "criterion": "A:statistical+B:deterministic-rename"
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 0.9999,
+   "purity_measured": 1.0,
+   "cardinality": 8,
+   "flagged": true,
+   "criterion": "A:statistical+B:deterministic-rename"
+  },
+  {
+   "test": "criterion_B_sweep",
+   "purity_injected": 1.0,
+   "purity_measured": 1.0,
+   "cardinality": 8,
+   "flagged": true,
+   "criterion": "A:statistical+B:deterministic-rename"
+  },
+  {
+   "test": "small_sample_regime",
+   "purity_injected": 0.9,
+   "criterion_A_flag_rate": 0.8,
+   "criterion_B_flag_rate": 0.0
+  },
+  {
+   "test": "small_sample_regime",
+   "purity_injected": 0.95,
+   "criterion_A_flag_rate": 1.0,
+   "criterion_B_flag_rate": 0.0
+  },
+  {
+   "test": "small_sample_regime",
+   "purity_injected": 0.99,
+   "criterion_A_flag_rate": 1.0,
+   "criterion_B_flag_rate": 0.3
+  },
+  {
+   "test": "small_sample_regime",
+   "purity_injected": 1.0,
+   "criterion_A_flag_rate": 1.0,
+   "criterion_B_flag_rate": 1.0
+  },
+  {
+   "test": "small_sample_imbalanced_regime",
+   "purity_injected": 0.9,
+   "criterion_A_flag_rate": 0.0,
+   "criterion_B_flag_rate": 0.0
+  },
+  {
+   "test": "small_sample_imbalanced_regime",
+   "purity_injected": 0.95,
+   "criterion_A_flag_rate": 0.0,
+   "criterion_B_flag_rate": 0.0
+  },
+  {
+   "test": "small_sample_imbalanced_regime",
+   "purity_injected": 0.99,
+   "criterion_A_flag_rate": 0.2,
+   "criterion_B_flag_rate": 0.2
+  },
+  {
+   "test": "small_sample_imbalanced_regime",
+   "purity_injected": 1.0,
+   "criterion_A_flag_rate": 0.4,
+   "criterion_B_flag_rate": 1.0
+  },
+  {
+   "test": "negative_control",
+   "feature": "honest_weak",
+   "purity": 0.8242,
+   "solo_f1": 0.2802,
+   "flagged": false
+  },
+  {
+   "test": "negative_control",
+   "feature": "fp_trap_unique_noise",
+   "cardinality": 6000,
+   "purity": 1.0,
+   "solo_f1": 0.1282,
+   "flagged": false
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+ "adapter": "adapters/unsw_7b_s77-final",
+ "n": 10000,
+ "strict_macro_f1": 0.2746,
+ "exact_accuracy": 0.377,
+ "off_vocab_rate": 0.0,
+ "pred_vocab": {
+  "Exploits": 2166,
+  "Reconnaissance": 2058,
+  "Normal": 1959,
+  "Generic": 1459,
+  "DoS": 1165,
+  "Fuzzers": 723,
+  "Analysis": 398,
+  "Shellcode": 72
+ },
+ "gold_vocab": {
+  "DoS": 1326,
+  "Exploits": 1326,
+  "Fuzzers": 1326,
+  "Normal": 1326,
+  "Reconnaissance": 1326,
+  "Generic": 1325,
+  "Shellcode": 1072,
+  "Analysis": 498,
+  "Backdoor": 355,
+  "Worms": 120
+ },
+ "samples": [
+  "Attack Category: Normal",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Normal",
+  "Attack Category: Exploits",
+  "Attack Category: Exploits",
+  "Attack Category: Analysis",
+  "Attack Category: Generic",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Normal",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Analysis",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Generic",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Generic",
+  "Attack Category: Fuzzers",
+  "Attack Category: Generic",
+  "Attack Category: DoS",
+  "Attack Category: Reconnaissance",
+  "Attack Category: DoS"
+ ]
+}

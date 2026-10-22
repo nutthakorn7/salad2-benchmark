@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
-"""Consume the SALAD-v2 training-size sweep and answer P6, P7, P24 and P8 at once.
+"""Analyze the SALAD-v2 training-size sweep (companion study; not used by the SALAD-v2 paper's claims).
 
-The sweep (scripts/p6_sweep.py, running on the Mac Mini) writes one JSON per cell
-with strict_macro_f1, off_vocab_rate, train_seconds, eval_seconds, n_train, arm
-and seed. That is enough to remediate four held papers from a single run:
+The sweep (scripts/p6_sweep.py) writes one JSON per cell with strict_macro_f1,
+off_vocab_rate, train_seconds, eval_seconds, n_train, arm and seed. From a single run
+this script reports:
 
-  P6  training-size scaling of label compliance, with per-seed stability
-  P7  cost per F1 point -- from the same runs, no extra compute
-  P24 entropy -> difficulty datapoints for the two SALAD-v2 arms
-  P8  the same two arms as new points in the N=8 entropy regression
+  - training-size scaling of label compliance, with per-seed stability
+  - cost per F1 point, from the same runs (no extra compute)
+  - label entropy and best-achieved F1 for each of the two SALAD-v2 arms
 
-Cost reporting follows the decision of 2026-07-30: wall-clock hours on named
-hardware is the primary, factual unit. Dollars are reported twice -- measured
-electricity, and an imputed cloud-rental scenario -- with both assumptions
-stated, rather than quoting a rental price that was never paid.
+Cost reporting: wall-clock hours on named hardware is the primary, factual unit.
+Dollars are reported twice -- measured electricity, and an imputed cloud-rental
+scenario -- with both assumptions stated, rather than quoting a rental price that
+was never paid.
 """
 import json, glob, os, argparse, math
 from collections import defaultdict, Counter
@@ -46,7 +45,7 @@ def load(sweep_dir):
 
 def p6_scaling(cells):
     """Per-arm, per-size: mean/std across seeds, and whether the ordering is
-    seed-stable. P6's original finding died on the seed mean; report both."""
+    seed-stable. Report both the seed mean and the per-seed values."""
     by = defaultdict(list)
     for c in cells:
         by[(c["arm"], c["n_train"])].append(c)
@@ -138,9 +137,9 @@ def p7_cost(cells):
     print(f"\n  sweep total so far: {tot_h:.1f} GPU-hours  "
           f"= ${tot_h * WATTS / 1000 * THB_PER_KWH / THB_PER_USD:.2f} electricity, "
           f"${tot_h * CLOUD_USD_PER_HOUR:.2f} imputed cloud")
-    print("  NOTE: eval dominates (10,000-row generation per cell). P7 should say")
-    print("        whether it prices training only or training+evaluation; the")
-    print("        original paper's figure was training-only.")
+    print("  NOTE: eval dominates (10,000-row generation per cell). State whether a cost")
+    print("        figure prices training only or training+evaluation;")
+    print("        the two can differ substantially.")
     out["_totals"] = {"gpu_hours": tot_h,
                       "usd_electricity": tot_h * WATTS / 1000 * THB_PER_KWH / THB_PER_USD,
                       "usd_cloud_imputed": tot_h * CLOUD_USD_PER_HOUR}
@@ -153,8 +152,7 @@ def entropy(counts):
 
 
 def p24_p8_points(cells):
-    """Label entropy and best-achieved F1 per arm — the datapoints P24's grading
-    framework and P8's entropy regression both need."""
+    """Label entropy and best-achieved F1 per arm (difficulty datapoints for the two SALAD-v2 arms)."""
     print("\n" + "=" * 78)
     print("P24 / P8 — entropy and difficulty datapoints for the two SALAD-v2 arms")
     print("=" * 78)
@@ -170,9 +168,9 @@ def p24_p8_points(cells):
               f"best LLM strict macro-F1={best:.4f}")
         out[arm] = {"H_Y_bits": h, "K": len(gold), "best_llm_strict_f1": best,
                     "n_cells": len(cs)}
-    print("\n  These are LLM-side numbers. P24/P8 also need each arm's classical")
-    print("  baselines, which P13 already reports (UNSW DT/SVM 0.5874/0.6505;")
-    print("  CICIDS 0.9310/0.9636) -- do not recompute, reuse and cite.")
+    print("\n  These are LLM-side numbers. The arms' classical baselines are")
+    print("  reported by the SALAD-v2 paper (UNSW DT/SVM 0.5874/0.6505;")
+    print("  CICIDS 0.9310/0.9636).")
     return out
 
 

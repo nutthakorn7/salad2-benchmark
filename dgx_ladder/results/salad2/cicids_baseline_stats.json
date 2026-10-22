@@ -1,0 +1,86 @@
+{
+ "dataset": "cicids",
+ "n_test": 10000,
+ "n_bootstrap": 2000,
+ "labels": [
+  "Benign",
+  "Botnet",
+  "BruteForce",
+  "DDoS",
+  "DoS",
+  "Infiltration",
+  "Portscan",
+  "WebAttack"
+ ],
+ "support": {
+  "Benign": 1777,
+  "Portscan": 1776,
+  "Botnet": 272,
+  "Infiltration": 1777,
+  "DDoS": 1777,
+  "DoS": 1777,
+  "WebAttack": 184,
+  "BruteForce": 660
+ },
+ "point_estimates": {
+  "decision_tree": 0.931,
+  "linear_svc": 0.9636,
+  "majority_class_floor": 0.0377
+ },
+ "bootstrap": {
+  "decision_tree": {
+   "boot_mean": 0.9311,
+   "ci95_low": 0.9231,
+   "ci95_high": 0.9385
+  },
+  "linear_svc": {
+   "boot_mean": 0.9636,
+   "ci95_low": 0.959,
+   "ci95_high": 0.9679
+  },
+  "majority_class_floor": {
+   "boot_mean": 0.0377,
+   "ci95_low": 0.0364,
+   "ci95_high": 0.039
+  },
+  "_paired_svc_minus_dt": {
+   "mean_diff": 0.0326,
+   "ci95_low": 0.0251,
+   "ci95_high": 0.04,
+   "frac_favoring_dt": 0.0
+  }
+ },
+ "per_class_f1": {
+  "decision_tree": {
+   "Benign": 0.957,
+   "Botnet": 0.9945,
+   "BruteForce": 0.9806,
+   "DDoS": 0.9994,
+   "DoS": 0.9798,
+   "Infiltration": 0.9121,
+   "Portscan": 0.9165,
+   "WebAttack": 0.7083
+  },
+  "linear_svc": {
+   "Benign": 0.9707,
+   "Botnet": 0.973,
+   "BruteForce": 0.9947,
+   "DDoS": 0.9994,
+   "DoS": 0.9787,
+   "Infiltration": 0.9142,
+   "Portscan": 0.9226,
+   "WebAttack": 0.9556
+  },
+  "majority_class_floor": {
+   "Benign": 0.3018,
+   "Botnet": 0.0,
+   "BruteForce": 0.0,
+   "DDoS": 0.0,
+   "DoS": 0.0,
+   "Infiltration": 0.0,
+   "Portscan": 0.0,
+   "WebAttack": 0.0
+  }
+ },
+ "method": "TF-IDF(max_features=5000, stop_words=english, token_pattern=[^\\s:]+) over rendered flow-text prompt; identical pipeline to salad2_baselines.py"
+}

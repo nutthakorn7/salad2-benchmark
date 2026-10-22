@@ -1,0 +1,137 @@
+[
+ {
+  "name": "LT_unsw_0.5b_lora_r16_s42",
+  "arm": "unsw",
+  "model": "0.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "unsw:lora",
+  "seed": 42,
+  "eval_bs": 32,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_cicids_0.5b_lora_r16_s42",
+  "arm": "cicids",
+  "model": "0.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "cicids:lora",
+  "seed": 42,
+  "eval_bs": 16,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_unsw_0.5b_lora_r16_s77",
+  "arm": "unsw",
+  "model": "0.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "unsw:lora",
+  "seed": 77,
+  "eval_bs": 32,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_cicids_0.5b_lora_r16_s77",
+  "arm": "cicids",
+  "model": "0.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "cicids:lora",
+  "seed": 77,
+  "eval_bs": 16,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_unsw_0.5b_lora_r16_s123",
+  "arm": "unsw",
+  "model": "0.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "unsw:lora",
+  "seed": 123,
+  "eval_bs": 32,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_cicids_0.5b_lora_r16_s123",
+  "arm": "cicids",
+  "model": "0.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "cicids:lora",
+  "seed": 123,
+  "eval_bs": 16,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_unsw_1.5b_lora_r16_s42",
+  "arm": "unsw",
+  "model": "1.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "unsw:lora",
+  "seed": 42,
+  "eval_bs": 32,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_cicids_1.5b_lora_r16_s42",
+  "arm": "cicids",
+  "model": "1.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "cicids:lora",
+  "seed": 42,
+  "eval_bs": 16,
+  "save_adapter": 1,
+  "micro": 2
+ },
+ {
+  "name": "LT_unsw_1.5b_lora_r16_s77",
+  "arm": "unsw",
+  "model": "1.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "unsw:lora",
+  "seed": 77,
+  "eval_bs": 32,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_cicids_1.5b_lora_r16_s77",
+  "arm": "cicids",
+  "model": "1.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "cicids:lora",
+  "seed": 77,
+  "eval_bs": 16,
+  "save_adapter": 1,
+  "micro": 2
+ },
+ {
+  "name": "LT_unsw_1.5b_lora_r16_s123",
+  "arm": "unsw",
+  "model": "1.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "unsw:lora",
+  "seed": 123,
+  "eval_bs": 32,
+  "save_adapter": 1
+ },
+ {
+  "name": "LT_cicids_1.5b_lora_r16_s123",
+  "arm": "cicids",
+  "model": "1.5b",
+  "method": "lora",
+  "rank": 16,
+  "tuned": "cicids:lora",
+  "seed": 123,
+  "eval_bs": 16,
+  "save_adapter": 1,
+  "micro": 2
+ }
+]

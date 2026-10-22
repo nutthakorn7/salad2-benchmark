@@ -1,0 +1,151 @@
+{
+ "reference": "Engelen, Rimmer & Joosen 2021, IEEE S&P Workshops (DLS), \"Troubleshooting an Intrusion Detection Dataset: the CICIDS2017 Case Study\"",
+ "quote_verified_by_direct_pdf_read": "it uses four prominent but largely irrelevant features to crisply differentiate between appendices of different classes (Fwd Header Len, Total Fwd Pkt, Min Seg Size Fwd, and Init Win bytes Fwd)",
+ "matched_features": {
+  "Fwd Header Len": "Fwd Header Length",
+  "Total Fwd Pkt": "Total Fwd Packet",
+  "Min Seg Size Fwd": "Fwd Seg Size Min",
+  "Init Win bytes Fwd": "FWD Init Win Bytes"
+ },
+ "n_rows": 200000,
+ "full_feature_dt_macro_f1": 0.9678,
+ "per_feature": {
+  "Fwd Header Length": {
+   "feature": "Fwd Header Length",
+   "cardinality": 625,
+   "purity": 0.9141,
+   "solo_f1": 0.5248,
+   "leak_like": false,
+   "criterion": null
+  },
+  "Total Fwd Packet": {
+   "feature": "Total Fwd Packet",
+   "cardinality": 235,
+   "purity": 0.7786,
+   "solo_f1": 0.1751,
+   "leak_like": false,
+   "criterion": null
+  },
+  "Fwd Seg Size Min": {
+   "feature": "Fwd Seg Size Min",
+   "cardinality": 9,
+   "purity": 0.8229,
+   "solo_f1": 0.2127,
+   "leak_like": false,
+   "criterion": null
+  },
+  "FWD Init Win Bytes": {
+   "feature": "FWD Init Win Bytes",
+   "cardinality": 352,
+   "purity": 0.7888,
+   "solo_f1": 0.1793,
+   "leak_like": false,
+   "criterion": null
+  }
+ },
+ "ranks_by_solo_f1": {
+  "Fwd Header Length": {
+   "rank": 10,
+   "of": 83,
+   "percentile": 88.0
+  },
+  "Total Fwd Packet": {
+   "rank": 57,
+   "of": 83,
+   "percentile": 31.3
+  },
+  "Fwd Seg Size Min": {
+   "rank": 45,
+   "of": 83,
+   "percentile": 45.8
+  },
+  "FWD Init Win Bytes": {
+   "rank": 55,
+   "of": 83,
+   "percentile": 33.7
+  }
+ },
+ "verdict": "directionally consistent for at least one Engelen-named feature (see ranks_by_solo_f1; the others may rank lower), even though none crosses this gate's stricter single-feature answer-key bar",
+ "all_findings_top10": [
+  {
+   "feature": "Bwd Header Length",
+   "cardinality": 647,
+   "purity": 0.9192,
+   "solo_f1": 0.6267,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Packet Length Mean",
+   "cardinality": 9371,
+   "purity": 0.931,
+   "solo_f1": 0.5989,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Average Packet Size",
+   "cardinality": 9371,
+   "purity": 0.931,
+   "solo_f1": 0.5989,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Packet Length Std",
+   "cardinality": 12589,
+   "purity": 0.9118,
+   "solo_f1": 0.5827,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Bwd Packet Length Mean",
+   "cardinality": 6864,
+   "purity": 0.8857,
+   "solo_f1": 0.5531,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Bwd Segment Size Avg",
+   "cardinality": 6864,
+   "purity": 0.8857,
+   "solo_f1": 0.5531,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Bwd Packet Length Std",
+   "cardinality": 7765,
+   "purity": 0.8882,
+   "solo_f1": 0.5324,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Total Length of Fwd Packet",
+   "cardinality": 3142,
+   "purity": 0.8904,
+   "solo_f1": 0.531,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Packet Length Max",
+   "cardinality": 2197,
+   "purity": 0.916,
+   "solo_f1": 0.5305,
+   "leak_like": false,
+   "criterion": null
+  },
+  {
+   "feature": "Fwd Header Length",
+   "cardinality": 625,
+   "purity": 0.9141,
+   "solo_f1": 0.5248,
+   "leak_like": false,
+   "criterion": null
+  }
+ ]
+}

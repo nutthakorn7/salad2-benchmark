@@ -1,0 +1,128 @@
+{
+ "unsw_s42_steps100": {
+  "n": 400,
+  "n_classes": 10,
+  "min_class": 3,
+  "dt": 0.426,
+  "svc": 0.4249
+ },
+ "unsw_s42_steps300": {
+  "n": 1200,
+  "n_classes": 10,
+  "min_class": 11,
+  "dt": 0.5059,
+  "svc": 0.5084
+ },
+ "unsw_s42_steps600": {
+  "n": 2400,
+  "n_classes": 10,
+  "min_class": 22,
+  "dt": 0.5185,
+  "svc": 0.5793
+ },
+ "unsw_s77_steps100": {
+  "n": 400,
+  "n_classes": 10,
+  "min_class": 2,
+  "dt": 0.3104,
+  "svc": 0.425
+ },
+ "unsw_s77_steps300": {
+  "n": 1200,
+  "n_classes": 10,
+  "min_class": 11,
+  "dt": 0.4543,
+  "svc": 0.4943
+ },
+ "unsw_s77_steps600": {
+  "n": 2400,
+  "n_classes": 10,
+  "min_class": 23,
+  "dt": 0.5444,
+  "svc": 0.5724
+ },
+ "unsw_s123_steps100": {
+  "n": 400,
+  "n_classes": 10,
+  "min_class": 3,
+  "dt": 0.383,
+  "svc": 0.4106
+ },
+ "unsw_s123_steps300": {
+  "n": 1200,
+  "n_classes": 10,
+  "min_class": 12,
+  "dt": 0.4441,
+  "svc": 0.4974
+ },
+ "unsw_s123_steps600": {
+  "n": 2400,
+  "n_classes": 10,
+  "min_class": 22,
+  "dt": 0.5186,
+  "svc": 0.5846
+ },
+ "cicids_s42_steps100": {
+  "n": 400,
+  "n_classes": 8,
+  "min_class": 22,
+  "dt": 0.7091,
+  "svc": 0.8365
+ },
+ "cicids_s42_steps300": {
+  "n": 1200,
+  "n_classes": 8,
+  "min_class": 40,
+  "dt": 0.8123,
+  "svc": 0.9425
+ },
+ "cicids_s42_steps600": {
+  "n": 2400,
+  "n_classes": 8,
+  "min_class": 88,
+  "dt": 0.8317,
+  "svc": 0.9552
+ },
+ "cicids_s77_steps100": {
+  "n": 400,
+  "n_classes": 8,
+  "min_class": 12,
+  "dt": 0.7416,
+  "svc": 0.8232
+ },
+ "cicids_s77_steps300": {
+  "n": 1200,
+  "n_classes": 8,
+  "min_class": 34,
+  "dt": 0.7281,
+  "svc": 0.9453
+ },
+ "cicids_s77_steps600": {
+  "n": 2400,
+  "n_classes": 8,
+  "min_class": 78,
+  "dt": 0.8211,
+  "svc": 0.959
+ },
+ "cicids_s123_steps100": {
+  "n": 400,
+  "n_classes": 8,
+  "min_class": 11,
+  "dt": 0.7767,
+  "svc": 0.77
+ },
+ "cicids_s123_steps300": {
+  "n": 1200,
+  "n_classes": 8,
+  "min_class": 40,
+  "dt": 0.7839,
+  "svc": 0.9486
+ },
+ "cicids_s123_steps600": {
+  "n": 2400,
+  "n_classes": 8,
+  "min_class": 85,
+  "dt": 0.8116,
+  "svc": 0.9564
+ }
+}

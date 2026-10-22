@@ -385,8 +385,8 @@ def run_cicids_engelen():
         print(f"  {v}: rank {rank}/{n_feats} by solo_f1 ({pctile:.0f}th percentile)")
     any_top_quartile = any(r["percentile"] >= 75 for r in ranks.values())
     print(f"\nAt least one Engelen-named feature in the top quartile by solo_f1: {any_top_quartile}")
-    verdict = ("directionally consistent (Engelen-named features rank high, even though "
-               "none crosses this gate's stricter single-feature answer-key bar)"
+    verdict = ("directionally consistent for at least one Engelen-named feature (see ranks_by_solo_f1; "
+               "the others may rank lower), even though none crosses this gate's stricter single-feature answer-key bar)"
                if any_top_quartile else
                "NOT corroborated (Engelen-named features do not even rank unusually high)")
     print(f"VERDICT: {verdict}")

@@ -12,14 +12,14 @@ the Mac Mini M4 (32 GB, measured via `sysctl hw.memsize`) runs the whole thing f
 WHAT IT MEASURES
 ----------------
 SALAD v1's benchmark was a lookup: its prompt carried `Alert Type`, a deterministic 1:1
-rename of the label, so *one column alone* scored macro-F1 0.96 -- the entire task. v2 is
+rename of the label, so *one column alone* scored macro-F1 1.00 -- the entire task. v2 is
 built from real UNSW-NB15 / CICIDS-2017 flow features with a leakage gate (see
 scripts/build_salad2.py). Classical baselines on v2:
 
-    v1 (leaked)                DT 0.96   <- Alert Type alone also 0.96
+    v1 (leaked)                DT 1.00   <- Alert Type alone also 1.00
     v1 leak-free (2 fields)    DT 0.37
     v2 / unsw                  DT 0.59, SVM 0.65    <- the honest target
-    v2 / cicids                DT 0.96 (honest but near-solved; weak venue for LLM value)
+    v2 / cicids                DT 0.93, SVM 0.96 (near-solved by classical ML)
     majority floor             0.02
 
 So the question this script answers is finally a real one: **can a fine-tuned LLM beat

@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """
-P6 training-size sweep on leak-free SALAD-v2. 1.5B x 5 training sizes x 3 seeds x 2 arms.
+Training-size sweep on SALAD-v2 (companion study). 1.5B x 5 training sizes x 3 seeds x 2 arms.
 
-Design notes that must survive into the paper:
+Design notes:
   * Training sets come from data/p6_fixed/, built with --fixed-proportions so class
     imbalance does NOT co-vary with n (it is ~90x on UNSW / ~21x on CICIDS at EVERY
     size). The default round-robin would have taken UNSW from 2.6x to 91.3x across the
     sweep, confounding size with imbalance under a macro-F1 metric.
-  * Every size scores on the SHIPPED test split, byte-identical to P13's 24-cell ladder,
-    so these numbers are comparable to it.
+  * Every size scores on the SHIPPED test split, byte-identical to the SALAD-v2 paper's
+    24-cell ladder, so these numbers are comparable to it.
   * --iters is FIXED at 600. Training compute is therefore constant across sizes; what
     varies is how many distinct examples the model sees within that budget. This is a
-    fixed-compute/varying-diversity design, NOT a "spend more to get more" design, and
-    P7's cost curve must be written accordingly.
+    fixed-compute/varying-diversity design, NOT a "spend more to get more" design, so a
+    cost curve over it is flat in training compute by construction.
 
 Resumable: skips any (arm,n,seed) whose result JSON exists. Checkpoints per run.
 """
@@ -56,7 +56,7 @@ for i, (arm, n, seed) in enumerate(runs, 1):
                         "--limit", "10000", "--out", res,
                         "--preds-out", f"{OUT}/{tag}_preds.jsonl"], check=True)
         teval = time.time() - t1
-        # stamp timings for P7's cost analysis
+        # stamp timings for the cost analysis
         try:
             d = json.load(open(res)); d["train_seconds"] = round(ttrain, 1)
             d["eval_seconds"] = round(teval, 1); d["iters"] = ITERS

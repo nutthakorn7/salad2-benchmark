@@ -1,0 +1,50 @@
+{
+ "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+ "adapter": "adapters/cicids_0.5b_s123-final",
+ "n": 10000,
+ "strict_macro_f1": 0.7738,
+ "exact_accuracy": 0.769,
+ "off_vocab_rate": 0.0,
+ "pred_vocab": {
+  "DoS": 2148,
+  "Portscan": 2041,
+  "DDoS": 1740,
+  "Benign": 1417,
+  "Infiltration": 1407,
+  "BruteForce": 702,
+  "Botnet": 280,
+  "WebAttack": 265
+ },
+ "gold_vocab": {
+  "Benign": 1777,
+  "Infiltration": 1777,
+  "DDoS": 1777,
+  "DoS": 1777,
+  "Portscan": 1776,
+  "BruteForce": 660,
+  "Botnet": 272,
+  "WebAttack": 184
+ },
+ "samples": [
+  "Attack Category: Benign",
+  "Attack Category: Portscan",
+  "Attack Category: Botnet",
+  "Attack Category: Infiltration",
+  "Attack Category: Benign",
+  "Attack Category: Portscan",
+  "Attack Category: Benign",
+  "Attack Category: DDoS",
+  "Attack Category: DoS",
+  "Attack Category: DoS",
+  "Attack Category: Benign",
+  "Attack Category: Portscan",
+  "Attack Category: Benign",
+  "Attack Category: Infiltration",
+  "Attack Category: Infiltration",
+  "Attack Category: DoS",
+  "Attack Category: DoS",
+  "Attack Category: DDoS",
+  "Attack Category: DDoS",
+  "Attack Category: DoS"
+ ]
+}

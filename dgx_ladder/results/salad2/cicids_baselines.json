@@ -1,0 +1,8 @@
+{
+ "decision_tree": 0.931,
+ "linear_svc": 0.9636,
+ "majority_class_floor": 0.0377,
+ "method": "TF-IDF(max_features=5000, stop_words=english, token_pattern=[^\\s:]+) over rendered flow-text prompt",
+ "train_file": "data/salad2_cicids/salad2_train.json",
+ "test_file": "data/salad2_cicids/salad2_test.json"
+}

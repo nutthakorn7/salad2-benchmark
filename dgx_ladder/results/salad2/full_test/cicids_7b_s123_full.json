@@ -1,0 +1,51 @@
+{
+ "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+ "adapter": "adapters/cicids_7b_s123-final",
+ "n": 10000,
+ "strict_macro_f1": 0.7995,
+ "exact_accuracy": 0.82,
+ "off_vocab_rate": 0.0006,
+ "pred_vocab": {
+  "Portscan": 2259,
+  "DDoS": 1938,
+  "Benign": 1765,
+  "DoS": 1646,
+  "Infiltration": 1383,
+  "BruteForce": 680,
+  "Botnet": 176,
+  "WebAttack": 147,
+  "Fwd RST Flags": 6
+ },
+ "gold_vocab": {
+  "Benign": 1777,
+  "Infiltration": 1777,
+  "DDoS": 1777,
+  "DoS": 1777,
+  "Portscan": 1776,
+  "BruteForce": 660,
+  "Botnet": 272,
+  "WebAttack": 184
+ },
+ "samples": [
+  "Attack Category: Benign\n packets: 2\nIdle Mean: 0",
+  "Attack Category: Portscan\nActive Mean: 0.0\nActive Std",
+  "Attack Category: Botnet\nActive Mean: 0.0\nActive Std",
+  "Attack Category: Infiltration",
+  "Attack Category: Benign\n packets: 2\nIdle Mean: 0",
+  "Attack Category: Portscan\nActive Mean: 0.0\nActive Std",
+  "Attack Category: Benign\nActive Mean: 238558",
+  "Attack Category: DDoS\nActive Mean: 55265",
+  "Attack Category: DoS\nActive Mean: 0.0\nActive Std",
+  "Attack Category: DoS\nActive Mean: 0.0\nActive Std",
+  "Attack Category: Benign",
+  "Attack Category: Portscan\n packets\n packets",
+  "Attack Category: Benign\n packets\n packets",
+  "Attack Category: Infiltration",
+  "Attack Category: Infiltration",
+  "Attack Category: DoS\nActive Mean: 0.0\nActive Std",
+  "Attack Category: DDoS",
+  "Attack Category: DDoS",
+  "Attack Category: DDoS\nActive Mean: 18041",
+  "Attack Category: DDoS"
+ ]
+}

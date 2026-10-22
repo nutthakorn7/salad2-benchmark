@@ -1,0 +1,405 @@
+{
+ "method": "TF-IDF(max_features=5000, stop_words=english, token_pattern=[^\\s:]+); DecisionTree(max_depth=20, random_state=42); LinearSVC(random_state=42); macro-F1 over gold-present classes on the arm's full 10,000-row test set",
+ "cells": [
+  {
+   "arm": "unsw",
+   "n": 1000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 900,
+   "class_counts": {
+    "Analysis": 16,
+    "Exploits": 174,
+    "Reconnaissance": 109,
+    "Fuzzers": 178,
+    "Generic": 167,
+    "DoS": 60,
+    "Shellcode": 16,
+    "Normal": 174,
+    "Backdoor": 4,
+    "Worms": 2
+   },
+   "max_to_min_ratio": 89.0,
+   "decision_tree": 0.4055,
+   "linear_svc": 0.3688
+  },
+  {
+   "arm": "unsw",
+   "n": 1000,
+   "train_rows_used": "all_rows",
+   "n_train": 1000,
+   "class_counts": {
+    "Analysis": 16,
+    "Exploits": 196,
+    "Reconnaissance": 123,
+    "Fuzzers": 196,
+    "Generic": 182,
+    "DoS": 66,
+    "Shellcode": 19,
+    "Normal": 196,
+    "Backdoor": 4,
+    "Worms": 2
+   },
+   "max_to_min_ratio": 98.0,
+   "decision_tree": 0.4067,
+   "linear_svc": 0.3723
+  },
+  {
+   "arm": "unsw",
+   "n": 2500,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 2250,
+   "class_counts": {
+    "Reconnaissance": 270,
+    "Exploits": 452,
+    "Fuzzers": 446,
+    "Generic": 407,
+    "Normal": 433,
+    "DoS": 149,
+    "Analysis": 37,
+    "Shellcode": 44,
+    "Backdoor": 8,
+    "Worms": 4
+   },
+   "max_to_min_ratio": 113.0,
+   "decision_tree": 0.4236,
+   "linear_svc": 0.4092
+  },
+  {
+   "arm": "unsw",
+   "n": 2500,
+   "train_rows_used": "all_rows",
+   "n_train": 2501,
+   "class_counts": {
+    "Reconnaissance": 309,
+    "Exploits": 491,
+    "Fuzzers": 491,
+    "Generic": 455,
+    "Normal": 491,
+    "DoS": 164,
+    "Analysis": 39,
+    "Shellcode": 47,
+    "Backdoor": 9,
+    "Worms": 5
+   },
+   "max_to_min_ratio": 98.2,
+   "decision_tree": 0.4019,
+   "linear_svc": 0.4125
+  },
+  {
+   "arm": "unsw",
+   "n": 5000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 4500,
+   "class_counts": {
+    "Normal": 869,
+    "Exploits": 888,
+    "Fuzzers": 878,
+    "Reconnaissance": 556,
+    "Generic": 821,
+    "DoS": 299,
+    "Backdoor": 16,
+    "Shellcode": 89,
+    "Analysis": 74,
+    "Worms": 10
+   },
+   "max_to_min_ratio": 88.8,
+   "decision_tree": 0.4392,
+   "linear_svc": 0.4711
+  },
+  {
+   "arm": "unsw",
+   "n": 5000,
+   "train_rows_used": "all_rows",
+   "n_train": 5000,
+   "class_counts": {
+    "Normal": 981,
+    "Exploits": 981,
+    "Fuzzers": 981,
+    "Reconnaissance": 617,
+    "Generic": 910,
+    "DoS": 329,
+    "Backdoor": 18,
+    "Shellcode": 94,
+    "Analysis": 78,
+    "Worms": 11
+   },
+   "max_to_min_ratio": 89.2,
+   "decision_tree": 0.4384,
+   "linear_svc": 0.4678
+  },
+  {
+   "arm": "unsw",
+   "n": 10000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 8999,
+   "class_counts": {
+    "Fuzzers": 1773,
+    "Exploits": 1768,
+    "Normal": 1753,
+    "DoS": 588,
+    "Reconnaissance": 1114,
+    "Generic": 1644,
+    "Analysis": 137,
+    "Shellcode": 171,
+    "Backdoor": 31,
+    "Worms": 20
+   },
+   "max_to_min_ratio": 88.7,
+   "decision_tree": 0.4954,
+   "linear_svc": 0.5166
+  },
+  {
+   "arm": "unsw",
+   "n": 10000,
+   "train_rows_used": "all_rows",
+   "n_train": 9999,
+   "class_counts": {
+    "Fuzzers": 1962,
+    "Exploits": 1962,
+    "Normal": 1962,
+    "DoS": 658,
+    "Reconnaissance": 1234,
+    "Generic": 1820,
+    "Analysis": 156,
+    "Shellcode": 188,
+    "Backdoor": 35,
+    "Worms": 22
+   },
+   "max_to_min_ratio": 89.2,
+   "decision_tree": 0.4648,
+   "linear_svc": 0.5215
+  },
+  {
+   "arm": "unsw",
+   "n": 20000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 18000,
+   "class_counts": {
+    "Exploits": 3534,
+    "Fuzzers": 3551,
+    "Generic": 3285,
+    "Normal": 3500,
+    "DoS": 1183,
+    "Analysis": 275,
+    "Reconnaissance": 2226,
+    "Shellcode": 345,
+    "Worms": 38,
+    "Backdoor": 63
+   },
+   "max_to_min_ratio": 93.4,
+   "decision_tree": 0.5288,
+   "linear_svc": 0.5814
+  },
+  {
+   "arm": "unsw",
+   "n": 20000,
+   "train_rows_used": "all_rows",
+   "n_train": 20000,
+   "class_counts": {
+    "Exploits": 3925,
+    "Fuzzers": 3924,
+    "Generic": 3640,
+    "Normal": 3925,
+    "DoS": 1315,
+    "Analysis": 312,
+    "Reconnaissance": 2469,
+    "Shellcode": 377,
+    "Worms": 43,
+    "Backdoor": 70
+   },
+   "max_to_min_ratio": 91.3,
+   "decision_tree": 0.5258,
+   "linear_svc": 0.5964
+  },
+  {
+   "arm": "cicids",
+   "n": 1000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 899,
+   "class_counts": {
+    "DDoS": 169,
+    "Infiltration": 170,
+    "Benign": 170,
+    "Portscan": 168,
+    "DoS": 168,
+    "WebAttack": 8,
+    "BruteForce": 27,
+    "Botnet": 19
+   },
+   "max_to_min_ratio": 21.2,
+   "decision_tree": 0.8023,
+   "linear_svc": 0.7157
+  },
+  {
+   "arm": "cicids",
+   "n": 1000,
+   "train_rows_used": "all_rows",
+   "n_train": 999,
+   "class_counts": {
+    "DDoS": 187,
+    "Infiltration": 187,
+    "Benign": 187,
+    "Portscan": 187,
+    "DoS": 187,
+    "WebAttack": 9,
+    "BruteForce": 34,
+    "Botnet": 21
+   },
+   "max_to_min_ratio": 20.8,
+   "decision_tree": 0.9056,
+   "linear_svc": 0.719
+  },
+  {
+   "arm": "cicids",
+   "n": 2500,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 2250,
+   "class_counts": {
+    "Portscan": 419,
+    "Infiltration": 421,
+    "BruteForce": 72,
+    "Benign": 421,
+    "DoS": 426,
+    "DDoS": 424,
+    "Botnet": 46,
+    "WebAttack": 21
+   },
+   "max_to_min_ratio": 20.3,
+   "decision_tree": 0.7827,
+   "linear_svc": 0.7943
+  },
+  {
+   "arm": "cicids",
+   "n": 2500,
+   "train_rows_used": "all_rows",
+   "n_train": 2500,
+   "class_counts": {
+    "Portscan": 468,
+    "Infiltration": 468,
+    "BruteForce": 85,
+    "Benign": 468,
+    "DoS": 468,
+    "DDoS": 468,
+    "Botnet": 52,
+    "WebAttack": 23
+   },
+   "max_to_min_ratio": 20.3,
+   "decision_tree": 0.7853,
+   "linear_svc": 0.8216
+  },
+  {
+   "arm": "cicids",
+   "n": 5000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 4500,
+   "class_counts": {
+    "DoS": 841,
+    "DDoS": 843,
+    "Infiltration": 838,
+    "Portscan": 841,
+    "Benign": 848,
+    "BruteForce": 153,
+    "Botnet": 94,
+    "WebAttack": 42
+   },
+   "max_to_min_ratio": 20.2,
+   "decision_tree": 0.8464,
+   "linear_svc": 0.953
+  },
+  {
+   "arm": "cicids",
+   "n": 5000,
+   "train_rows_used": "all_rows",
+   "n_train": 5000,
+   "class_counts": {
+    "DoS": 936,
+    "DDoS": 936,
+    "Infiltration": 936,
+    "Portscan": 936,
+    "Benign": 936,
+    "BruteForce": 170,
+    "Botnet": 104,
+    "WebAttack": 46
+   },
+   "max_to_min_ratio": 20.3,
+   "decision_tree": 0.9518,
+   "linear_svc": 0.9599
+  },
+  {
+   "arm": "cicids",
+   "n": 10000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 9000,
+   "class_counts": {
+    "Infiltration": 1670,
+    "Benign": 1691,
+    "DoS": 1691,
+    "DDoS": 1679,
+    "Portscan": 1681,
+    "BruteForce": 310,
+    "Botnet": 195,
+    "WebAttack": 83
+   },
+   "max_to_min_ratio": 20.4,
+   "decision_tree": 0.9695,
+   "linear_svc": 0.969
+  },
+  {
+   "arm": "cicids",
+   "n": 10000,
+   "train_rows_used": "all_rows",
+   "n_train": 10000,
+   "class_counts": {
+    "Infiltration": 1872,
+    "Benign": 1872,
+    "DoS": 1872,
+    "DDoS": 1872,
+    "Portscan": 1872,
+    "BruteForce": 341,
+    "Botnet": 208,
+    "WebAttack": 91
+   },
+   "max_to_min_ratio": 20.6,
+   "decision_tree": 0.9713,
+   "linear_svc": 0.9687
+  },
+  {
+   "arm": "cicids",
+   "n": 20000,
+   "train_rows_used": "first90pct_as_trained_by_mlx",
+   "n_train": 18000,
+   "class_counts": {
+    "Portscan": 3358,
+    "DDoS": 3361,
+    "DoS": 3389,
+    "Benign": 3369,
+    "Infiltration": 3377,
+    "BruteForce": 615,
+    "Botnet": 380,
+    "WebAttack": 151
+   },
+   "max_to_min_ratio": 22.4,
+   "decision_tree": 0.9759,
+   "linear_svc": 0.9747
+  },
+  {
+   "arm": "cicids",
+   "n": 20000,
+   "train_rows_used": "all_rows",
+   "n_train": 20000,
+   "class_counts": {
+    "Portscan": 3744,
+    "DDoS": 3744,
+    "DoS": 3744,
+    "Benign": 3745,
+    "Infiltration": 3744,
+    "BruteForce": 682,
+    "Botnet": 415,
+    "WebAttack": 182
+   },
+   "max_to_min_ratio": 20.6,
+   "decision_tree": 0.9745,
+   "linear_svc": 0.9758
+  }
+ ]
+}

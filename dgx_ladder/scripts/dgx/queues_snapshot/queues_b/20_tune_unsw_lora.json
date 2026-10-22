@@ -1,0 +1,98 @@
+[
+ {
+  "name": "T_unsw_lora_r16_lr5e-5_e3_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 5e-05,
+  "steps": 3375,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr1e-4_e3_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.0001,
+  "steps": 3375,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr2e-4_e3_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.0002,
+  "steps": 3375,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr5e-4_e3_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.0005,
+  "steps": 3375,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr1e-3_e3_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.001,
+  "steps": 3375,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr1e-4_e6_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.0001,
+  "steps": 6750,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr2e-4_e6_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.0002,
+  "steps": 6750,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ },
+ {
+  "name": "T_unsw_lora_r16_lr5e-4_e6_v500",
+  "arm": "unsw",
+  "method": "lora",
+  "rank": 16,
+  "lr": 0.0005,
+  "steps": 6750,
+  "sched": "cosine",
+  "val": 500,
+  "seed": 42,
+  "eval_bs": 32
+ }
+]

@@ -1,0 +1,52 @@
+{
+ "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+ "adapter": "adapters/unsw_0.5b_s123-final",
+ "n": 10000,
+ "strict_macro_f1": 0.1995,
+ "exact_accuracy": 0.3151,
+ "off_vocab_rate": 0.0,
+ "pred_vocab": {
+  "Reconnaissance": 5075,
+  "DoS": 2114,
+  "Generic": 1395,
+  "Exploits": 460,
+  "Analysis": 450,
+  "Fuzzers": 256,
+  "Normal": 224,
+  "Shellcode": 26
+ },
+ "gold_vocab": {
+  "DoS": 1326,
+  "Exploits": 1326,
+  "Fuzzers": 1326,
+  "Normal": 1326,
+  "Reconnaissance": 1326,
+  "Generic": 1325,
+  "Shellcode": 1072,
+  "Analysis": 498,
+  "Backdoor": 355,
+  "Worms": 120
+ },
+ "samples": [
+  "Attack Category: Reconnaissance",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Exploits",
+  "Attack Category: DoS",
+  "Attack Category: Analysis",
+  "Attack Category: DoS",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Analysis",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Generic",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Generic",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Generic",
+  "Attack Category: DoS",
+  "Attack Category: Reconnaissance",
+  "Attack Category: Exploits"
+ ]
+}

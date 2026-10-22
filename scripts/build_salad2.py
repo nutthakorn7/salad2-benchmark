@@ -20,18 +20,22 @@ disagree by ~0.07 in solo_f1, so "matching" overstated it; both clear the 0.85 f
 a wide margin regardless. 2-for-2 fresh runs agreed with each other; only c8a765e
 disagreed with both.
 
-ROOT CAUSE, CONFIRMED (not guessed): running check_leakage() directly on the small,
-CLASS-BALANCED, EMITTED train file (salad2_train.json, 5,000 rows after take()'s
-round-robin balancing) reproduces the same failure mode -- Fwd Header Length comes
-back at card 156, solo_f1 0.912, FLAGGED. Small sample size collapses the column's
-cardinality (fewer rows -> fewer distinct integer header-length values observed) and
-class-balancing removes the natural frequency structure a decision tree needs many
-features to reconstruct, so ONE column's solo_f1 gets inflated past the 0.85 floor
-purely from sample size and balance, not from any real answer-key relationship. This
-is the EXACT mechanism scripts/validate_leak_gate.py's synthetic small-sample test
-independently characterizes (see its "small-sample regime" sweep) -- criterion A is
-known to be unreliable at small N, and c8a765e's certification was, in effect, run in
-that unreliable regime instead of on the large deduplicated pool main() actually uses.
+LIKELY CAUSE (population sensitivity; the historical run's exact values were not
+recovered): running check_leakage() directly on the small, CLASS-BALANCED, EMITTED
+train file (salad2_train.json, 5,000 rows after take()'s round-robin balancing)
+reproduces a SIMILAR failure -- Fwd Header Length comes back at card 156, solo_f1
+0.912, FLAGGED -- though not the c8a765e values (card 274, solo_f1 0.892), whose
+population could not be recovered. A plausible mechanism: a small sample collapses the
+column's cardinality (fewer rows -> fewer distinct integer header-length values
+observed) and class-balancing removes the natural frequency structure a decision tree
+needs many features to reconstruct, so ONE column's solo_f1 is inflated past the 0.85
+floor in a small, balanced sample with no real answer-key relationship behind it.
+Sample size and balance were changed together, so their contributions are not
+separated, and scripts/validate_leak_gate.py's synthetic small-sample sweep (its
+"small-sample regime") characterizes related small-N behavior (there as missed leaks,
+here a false positive) rather than reproducing this mechanism. Criterion A is
+therefore unreliable at small N, and c8a765e's certification was plausibly run in that
+regime instead of on the large deduplicated pool main() actually uses.
 (Two secondary hardening fixes were also made while investigating, though neither was
 the actual cause of this specific FAIL: replaced `d["train"].shuffle(seed=...)` -- a
 `datasets`-library shuffle whose output depends on the installed library version, not
@@ -41,8 +45,8 @@ pure function of the row SET rather than upstream iteration order. Both are good
 practice and now confirmed bit-for-bit deterministic across repeated runs in this
 environment, but should not be credited with fixing the c8a765e FAIL specifically.)
 
-CONCLUSION: CICIDS-2017 was never actually leaky at the level check_leakage() is
-meant to certify (the large pre-balance pool); the "exclude CICIDS-2017 pending a
+CONCLUSION: CICIDS-2017 passes the gate on the large pre-balance pool it is meant to
+certify; the "exclude CICIDS-2017 pending a
 rebuild" note that followed from c8a765e was premature, caused by certifying against
 the wrong (small, balanced) population. Re-certified 2026-07-19: UNSW 0.5817 PASS,
 CICIDS-2017 0.9678 PASS, both against the correct ~193k/~185k-row pools. Independent
